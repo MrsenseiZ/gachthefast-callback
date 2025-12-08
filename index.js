@@ -18,11 +18,11 @@ app.post("/callback", async (req, res) => {
   // POST http://localhost:4444/card-callback  (trong bot)
   
   try {
-    await fetch("http://<YOUR_BOT_IP>:4444/card-callback", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(req.body)
-    });
+await fetch("http://8.222.133.102:4444/card-callback", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(req.body),
+});
   } catch (e) {
     console.error("Bot unreachable:", e);
   }
