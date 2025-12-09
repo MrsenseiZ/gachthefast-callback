@@ -28,6 +28,8 @@ await fetch("http://8.222.133.102:4444/card-callback", {
   }
 });
 
-app.listen(3000, () => {
-  console.log("Callback server running on port 3000");
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log("Callback server running on port", PORT);
 });
